@@ -10,7 +10,7 @@
   padding: 0 50px;
 
   &__left {
-    width: 60%;
+    width: 40%;
     padding-right: 30px;
 
     &__title {
@@ -22,33 +22,61 @@
       overflow: hidden;
       white-space: nowrap;
       letter-spacing: 0.15em;
-      border-right: 0.15em solid orangered;
-      animation: typing 5s steps(40, end) infinite,
-                cursor-blink 0.75s step-end infinite;
-
-      @keyframes typing {
-        from {
-          width: 100px;
-        }
-        50% {
-          width: 315px;
-        }
-        80% {
-          width: 315px;
-        }
-        to {
-          width: 100px;
-        }
-      }
+      border-right: 0.15em solid $color-gray;
       
-      /* The cursor  blinking effect */
       @keyframes cursor-blink {
         from,
         to {
           border-color: transparent;
         }
         50% {
-          border-color: orangered;
+          border-color: $color-gray;
+        }
+      }
+    }
+
+    .typing {
+      animation: typing 3s steps(9, end) infinite,
+                cursor-blink 0.75s step-end infinite;
+
+      @keyframes typing {
+        from {
+          width: 95px;
+        }
+        40% {
+          width: 315px;
+        }
+        60% {
+          width: 315px;
+        }
+        85% {
+          width: 95px;
+        }
+        100% {
+          width: 95px;
+        }
+      }
+    }
+
+    .typing2 {
+      animation: typing2 3.5s steps(20, end) infinite,
+                cursor-blink 0.75s step-end infinite;
+
+      @keyframes typing2 {
+        from {
+          width: 95px;
+        }
+        40% {
+          width: 580px;
+        }
+        60% {
+          width: 580px;
+        }
+        85% {
+          width: 95px;
+        }
+        100% {
+          width: 95px;
         }
       }
     }
@@ -63,6 +91,7 @@
     &__text {
       font-size: 16px;
       line-height: 1.5;
+      text-align: justify;
     }
 
     &__icons {
@@ -77,7 +106,7 @@
 
   &__right {
     width: 40%;
-    margin-left: 50px;
+    margin-left: 200px;
     text-align: right;
     height: 400px;
 
