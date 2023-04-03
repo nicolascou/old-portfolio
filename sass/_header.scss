@@ -2,15 +2,20 @@
 
 .header {
   position: fixed;
+  background-color: #fefefe;
+  clip-path: polygon();
+  border-radius: 0 0 30px 30px;
+  z-index: 3;
   width: 100%;
-  max-width: 1300px;
+  max-width: 1500px;
+  box-shadow: 2px 4px 4px rgba($color: #333, $alpha: .25);
   left: 50%;
   top: 0;
   transform: translateX(-50%);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 20px 30px;
   color: black;
 
   &__title {
