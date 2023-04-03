@@ -1,2 +1,13 @@
 @import "globals";
 @import "header";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'IBM Plex Mono', sans-serif;
+}
+
+body {
+  background-color: white;
+}
