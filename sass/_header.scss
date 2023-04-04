@@ -9,7 +9,7 @@
   left: 50%;
   top: 0;
   transform: translateX(-50%);
-  background: rgba($color: $color-primary, $alpha: .5);
+  background: rgba($color: white, $alpha: .95);
   border-radius: 20px;
   display: flex;
   justify-content: space-between;
@@ -33,9 +33,10 @@
       margin: 0 15px;
       font-size: 16px;
       font-weight: bold;
-      color: black;
       text-decoration: none;
       transition: all .2s;
+      color: black;
+      fill: black;
 
       &:hover {
         color: white;

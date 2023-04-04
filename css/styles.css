@@ -7,7 +7,7 @@
   left: 50%;
   top: 0;
   transform: translateX(-50%);
-  background: rgba(85, 181, 229, 0.5);
+  background: rgba(255, 255, 255, 0.95);
   border-radius: 20px;
   display: flex;
   justify-content: space-between;
@@ -28,9 +28,10 @@
   margin: 0 15px;
   font-size: 16px;
   font-weight: bold;
-  color: black;
   text-decoration: none;
   transition: all 0.2s;
+  color: black;
+  fill: black;
 }
 .header__navbar__item:hover {
   color: white;
@@ -39,12 +40,13 @@
 
 .hero {
   height: 100vh;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0 50px;
+  color: white;
 }
 .hero__left {
   width: 40%;
@@ -58,14 +60,14 @@
   overflow: hidden;
   white-space: nowrap;
   letter-spacing: 0.15em;
-  border-right: 0.15em solid #666;
+  border-right: 0.15em solid #bbb;
 }
 @keyframes cursor-blink {
   from, to {
     border-color: transparent;
   }
   50% {
-    border-color: #666;
+    border-color: #bbb;
   }
 }
 .hero__left .typing {
@@ -110,9 +112,9 @@
 }
 .hero__left__subtitle {
   font-size: 22px;
-  color: #666;
+  color: #bbb;
   font-weight: 500;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
 }
 .hero__left__text {
   font-size: 16px;
@@ -124,7 +126,12 @@
   margin-top: 20px;
 }
 .hero__left__icons a {
+  fill: white;
   margin-right: 10px;
+  transition: fill 0.3s;
+}
+.hero__left__icons a:hover {
+  fill: black;
 }
 .hero__right {
   width: 40%;
@@ -157,6 +164,10 @@
     margin-top: 50px;
   }
 }
+.aboutme {
+  height: 1000px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -165,7 +176,7 @@
 }
 
 body {
-  background-color: white;
+  background: url(../img/codioful-formerly-gradienta-bKESVqfxass-unsplash.jpg) center/cover;
 }
 
 /*# sourceMappingURL=styles.css.map */

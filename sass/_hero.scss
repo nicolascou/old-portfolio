@@ -2,12 +2,13 @@
 
 .hero {
   height: 100vh;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0 50px;
+  color: white;
 
   &__left {
     width: 40%;
@@ -85,7 +86,7 @@
       font-size: 22px;
       color: $color-gray;
       font-weight: 500;
-      margin-bottom: 5px;
+      margin-bottom: 15px;
     }
 
     &__text {
@@ -97,9 +98,15 @@
     &__icons {
       display: flex;
       margin-top: 20px;
-
+      
       a {
+        fill: white;
         margin-right: 10px;
+        transition: fill .3s;
+
+        &:hover {
+          fill: black;
+        }
       }
     }
   }

@@ -1,6 +1,7 @@
 @import "globals";
 @import "header";
 @import "hero";
+@import "aboutme";
 
 * {
   margin: 0;
@@ -10,5 +11,5 @@
 }
 
 body {
-  background-color: white;
+  background: url(../img/codioful-formerly-gradienta-bKESVqfxass-unsplash.jpg) center / cover;
 }
