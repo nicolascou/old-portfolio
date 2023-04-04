@@ -108,77 +108,29 @@
 .hero {
   height: 100vh;
   max-width: 1400px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 50px;
-  color: white;
-}
-.hero__left {
-  width: 40%;
-  padding-right: 30px;
+  margin-top: 150px;
+  padding: 0 30px;
 }
 .hero__left__title {
-  font-size: 32px;
+  font-size: 24px;
   font-weight: bold;
   margin-bottom: 5px;
   display: inline-block;
   overflow: hidden;
   white-space: nowrap;
   letter-spacing: 0.15em;
-  border-right: 0.15em solid #bbb;
+  border-right: 0.15em solid white;
 }
 @keyframes cursor-blink {
   from, to {
     border-color: transparent;
   }
   50% {
-    border-color: #bbb;
-  }
-}
-.hero__left .typing {
-  animation: typing 3s steps(9, end) infinite, cursor-blink 0.75s step-end infinite;
-}
-@keyframes typing {
-  from {
-    width: 95px;
-  }
-  40% {
-    width: 315px;
-  }
-  60% {
-    width: 315px;
-  }
-  85% {
-    width: 95px;
-  }
-  100% {
-    width: 95px;
-  }
-}
-.hero__left .typing2 {
-  animation: typing2 3.5s steps(20, end) infinite, cursor-blink 0.75s step-end infinite;
-}
-@keyframes typing2 {
-  from {
-    width: 95px;
-  }
-  40% {
-    width: 580px;
-  }
-  60% {
-    width: 580px;
-  }
-  85% {
-    width: 95px;
-  }
-  100% {
-    width: 95px;
+    border-color: white;
   }
 }
 .hero__left__subtitle {
-  font-size: 22px;
+  font-size: 20px;
   color: #bbb;
   font-weight: 500;
   margin-bottom: 15px;
@@ -187,6 +139,7 @@
   font-size: 16px;
   line-height: 1.5;
   text-align: justify;
+  color: white;
 }
 .hero__left__icons {
   display: flex;
@@ -201,10 +154,10 @@
   fill: black;
 }
 .hero__right {
-  width: 40%;
-  margin-left: 200px;
-  text-align: right;
-  height: 500px;
+  margin: 0 auto;
+  margin-top: 70px;
+  width: 80%;
+  aspect-ratio: 1/1;
 }
 .hero__right__img {
   width: 100%;
@@ -216,19 +169,72 @@
   background-repeat: no-repeat;
 }
 
-@media only screen and (max-width: 1000px) {
+.typing {
+  animation: typing 3s steps(9, end) infinite, cursor-blink 0.75s step-end infinite;
+}
+@keyframes typing {
+  from {
+    width: 20%;
+  }
+  40% {
+    width: 100%;
+  }
+  60% {
+    width: 100%;
+  }
+  85% {
+    width: 20%;
+  }
+  100% {
+    width: 20%;
+  }
+}
+
+.typing2 {
+  animation: typing2 3.5s steps(20, end) infinite, cursor-blink 0.75s step-end infinite;
+}
+@keyframes typing2 {
+  from {
+    width: 20%;
+  }
+  40% {
+    width: 100%;
+  }
+  60% {
+    width: 100%;
+  }
+  85% {
+    width: 20%;
+  }
+  100% {
+    width: 20%;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
   .hero {
-    flex-direction: column;
-    margin-top: 100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .hero__left {
-    width: 90%;
-    padding: 0;
+    min-width: 580px;
+  }
+  .hero__left__title {
+    font-size: 32px;
+  }
+  .hero__left__subtitle {
+    font-size: 22px;
+  }
+  .hero__left__text {
+    font-size: 16px;
+    max-width: 450px;
   }
   .hero__right {
-    width: 100%;
-    margin-left: 0;
-    margin-top: 50px;
+    width: 30%;
+    margin: 0;
+    margin-left: 100px;
   }
 }
 .aboutme {
