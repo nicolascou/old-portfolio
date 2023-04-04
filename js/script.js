@@ -1,3 +1,16 @@
+// Handling nav menu in mobile
+const navbar = document.getElementById('navbar');
+const hamburgerBtn = document.getElementById('hamburgerBtn');
+const closeBtn = document.getElementById('closeBtn');
+
+function toggleNavbar() {
+  navbar.classList.toggle('header__navbar--show');
+  hamburgerBtn.classList.toggle('header__hamburger--hidden');
+  closeBtn.classList.toggle('header__hamburger--hidden');
+}
+
+
+// Animation of hero title
 const spanHero = document.getElementById('typingPhrase');
 
 function firstSpanHero() {
