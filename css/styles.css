@@ -57,8 +57,8 @@
   border-radius: 50%;
 }
 .header__navbar__item:hover {
-  color: #55b5e5;
-  fill: #55b5e5;
+  color: #d20fff;
+  fill: #d20fff;
 }
 .header__navbar--show {
   display: block;
@@ -116,6 +116,9 @@
     padding: 0 25px;
   }
 }
+.hero__left {
+  position: relative;
+}
 .hero__left__title {
   margin-bottom: 5px;
   display: flex;
@@ -166,7 +169,7 @@
   transition: fill 0.3s;
 }
 .hero__left__icons a:hover {
-  fill: black;
+  fill: #d20fff;
 }
 .hero__right {
   margin: 0 auto;
@@ -182,7 +185,8 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  border: 10px solid #55b5e5;
+  box-shadow: 8px 8px 10px rgba(1, 1, 1, 0.5);
+  border: 8px solid black;
 }
 
 .typing {
@@ -236,7 +240,19 @@
     padding: 0 80px;
   }
   .hero__left {
-    min-width: 580px;
+    min-width: 620px;
+  }
+  .hero__left::before {
+    content: "";
+    position: absolute;
+    top: -65%;
+    left: -20%;
+    background-color: rgba(0, 0, 0, 0.25);
+    border-radius: 50%;
+    width: 125%;
+    aspect-ratio: 3/2;
+    filter: blur(3px);
+    z-index: -1;
   }
   .hero__left__title h2, .hero__left__title span {
     font-size: 32px;
@@ -265,7 +281,7 @@
 }
 
 body {
-  background: url(../img/codioful-formerly-gradienta-bKESVqfxass-unsplash.jpg) center/cover;
+  background: url(../img/codioful-formerly-gradienta-m_7p45JfXQo-unsplash.jpg) center/cover;
 }
 
 /*# sourceMappingURL=styles.css.map */
