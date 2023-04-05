@@ -308,4 +308,16 @@ body {
   background: url(../img/codioful-formerly-gradienta-m_7p45JfXQo-unsplash.jpg) center/cover;
 }
 
+.fadein-animation {
+  transition: all 0.8s;
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.fadein-animation.inview {
+  opacity: 1;
+  transform: none;
+  transition-delay: 0.3s;
+}
+
 /*# sourceMappingURL=styles.css.map */
