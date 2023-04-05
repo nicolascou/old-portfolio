@@ -1,0 +1,15 @@
+@import "globals";
+@import "header";
+@import "hero";
+@import "aboutme";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'IBM Plex Mono', sans-serif;
+}
+
+body {
+  background: url(../img/codioful-formerly-gradienta-m_7p45JfXQo-unsplash.jpg) center / cover;
+}

@@ -1,50 +1,35 @@
 @import "globals";
+@import "others/typing-animation";
 
 .hero {
   height: 100vh;
   max-width: 1400px;
-  margin-top: 150px;
-  padding: 0 50px;
-
-  @media only screen and (max-width: 500px) {
-    padding: 0 25px;
-    margin-top: 130px;
-  }
+  padding: 0 25px;
+  margin-top: 130px;
 
   &__left {
     position: relative;
     
     &__title {
       margin-bottom: 5px;
-      display: flex;
-      align-items: center;
       width: fit-content;
+      display: block;
       color: white;
 
       h2, span {
-        font-size: 24px;
+        font-size: 18px;
       }
 
       span {
         display: inline-block;
         width: 0;
         font-weight: bold;
-        margin-left: 15px;
+        margin-top: 5px;
 
         overflow: hidden;
         white-space: nowrap;
         letter-spacing: 0.15em;
         border-right: 0.15em solid white;
-
-      }
-      @media screen and (max-width: 500px) {
-        display: block;
-
-        span {
-          margin: 0;
-          margin-top: 5px;
-          font-size: 20px;
-        }
       }
       
       @keyframes cursor-blink {
@@ -59,7 +44,7 @@
     }
 
     &__subtitle {
-      font-size: 18px;
+      font-size: 16px;
       color: $color-gray;
       font-weight: 500;
       margin-bottom: 15px;
@@ -94,10 +79,6 @@
     width: 90%;
     aspect-ratio: 1 / 1;
 
-    @media only screen and (min-width: 800px) {
-      width: 60%;
-    }
-
     &__img {
       width: 100%;
       height: 100%;
@@ -112,48 +93,38 @@
   }
 }
 
-.typing {
-  animation: typing 3s steps(9, end) infinite,
-            cursor-blink 0.75s step-end infinite;
+@media only screen and (min-width: 500px) {
+  .hero {
+    margin-top: 150px;
+    padding: 0 50px;
+    
+    &__left {
+      &__title {
+        display: flex;
+        align-items: center;
+        
+        h2 {
+          font-size: 24px;
+        }
+        span {
+          margin: 0;
+          margin-left: 15px;
+          font-size: 24px;
+        }
+      }
 
-  @keyframes typing {
-    from {
-      width: 0;
-    }
-    40% {
-      width: 100%;
-    }
-    60% {
-      width: 100%;
-    }
-    85% {
-      width: 0;
-    }
-    100% {
-      width: 0;
-    }
-  }
-}
+      &__subtitle {
+        font-size: 18px;
+      }
 
-.typing2 {
-  animation: typing2 3.5s steps(20, end) infinite,
-            cursor-blink 0.75s step-end infinite;
+      &__text {
+        font-size: 16px;
+        max-width: 450px;
+      }
+    }
 
-  @keyframes typing2 {
-    from {
-      width: 0;
-    }
-    40% {
-      width: 100%;
-    }
-    60% {
-      width: 100%;
-    }
-    85% {
-      width: 0;
-    }
-    100% {
-      width: 0;
+    &__right {
+      width: 50%;
     }
   }
 }
@@ -192,11 +163,6 @@
 
       &__subtitle {
         font-size: 22px;
-      }
-
-      &__text {
-        font-size: 16px;
-        max-width: 450px;
       }
     }
 
